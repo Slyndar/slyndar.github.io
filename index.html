@@ -26,19 +26,33 @@
         <script src="test.js"></script>
     </head>
     <body style="background-color: transparent;">
-        <form name="form1" method="post" action="">   
+        <!-- <form name="form1" method="post" action="">   
             <label for="num1">Number 1:</label>
             <input type="text" size="8" id="num1" name="num1"><br><br>
             <label for="num2">Number 2:</label>
             <input type="text" size="8" id="num2" name="num2"><br><br>
             <input type="button" value="Submit" onClick="calculate();" name="Submit">
+            
             <table>
                 <tr>
                     <td><label class="rueckmeldung" id="loesung"></label></td>
                 </tr>
             </table>  
+        </form> -->
+        <h3>Byte Array to Image Converter</h3>
+        <p>The input for the image height and width must be a natural number. For example 1, 2 or 300.</p>
+        <p>The input for the input matrix must be in the form '[X,Y,Z,...,X,Z,Y]' with X, Y, Z between 0 and 255</p>
+        <p>Attention: Only 3-channel RGB images are processed correctly. This means that a single pixel consists of 3 numbers, the red value, the green value and the blue value in exactly this order.</p>
+        <p>Example [1,2,3] is an image consisting of a pixel with the red value 1, the green value 2 and the blue value 3.</p>
+        <form name="imageform" method="post" action="">
+            <label for="height">Image Height:</label>
+            <input type="text" size="8" id="height" name="height"><br><br>
+            <label for="width">Image Width:</label>
+            <input type="text" size="8" id="width" name="width"><br><br>
+            <label for="input-matrix">Input Matrix:</label>
+            <input type="text" id="input-matrix"><br><br>
+            <input type="button" value="Generate" onClick="convertToImage()" name="Submit">
         </form>
-        <label id="playerLife">Initial</label>
-        <img id=""ItemPreview" src="">
+        <img id=""ItemPreview" src="">       
     </body>
 </html>
